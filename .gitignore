@@ -1,5 +1,5 @@
 target/
-<<<<<<< HEAD
+
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -35,4 +35,4 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
->>>>>>> be1295d981e217f6e0c0dbb7eb46d0e8e7a1102e
+
