@@ -26,7 +26,7 @@ public class StudentApi {
 	@RequestMapping(path="/student",method=RequestMethod.GET)
 	public List<Student> getStudent(){
 		
-		return null;
+		return studentservice.getStudents();
 		
 	}
 }
