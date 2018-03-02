@@ -1,8 +1,6 @@
 package com.studentapp.business.service;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
@@ -31,12 +29,22 @@ public class StudentService {
 
 	}
 
-	public Student findStudentById(String id) {
+	public Student findStudentById(int id) {
 		if (student.containsKey(id))
 			return student.get(id);
 		else
 			return null;
 
 	}
+
+	public void addStudent(Student newstudent) {
+		// TODO Auto-generated method stub
+		
+		student.put(3, newstudent);
+	}
+	
+	
+	
+	
 
 }
