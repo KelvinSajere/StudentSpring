@@ -1,29 +1,42 @@
 package com.studentapp.business.service;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.studentapp.data.entity.Student;
 
 @Service
 public class StudentService {
-	
-	private List<Student> student=Arrays.asList(
-			
-			new Student("John", 2, "Electrical"),
-			new Student("Peter", 1, "Physical Science")
-			
-			);
-	
-	@RequestMapping(path="/student",method=RequestMethod.GET)
-	public List<Student> getStudents(){
-		
+
+	/**
+	 * @param student
+	 */
+	private Map<Integer, Student> student;
+
+	public StudentService() {
+		student = new HashMap<>();
+
+		student.put(1, new Student("John", 1, "Electrical"));
+		student.put(2, new Student("Peter", 2, "Chemistry"));
+
+	}
+
+	public Map<Integer, Student> getAllStudents() {
+
 		return student;
-		
+
+	}
+
+	public Student findStudentById(String id) {
+		if (student.containsKey(id))
+			return student.get(id);
+		else
+			return null;
+
 	}
 
 }
